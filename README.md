@@ -13,8 +13,8 @@ pipx ensurepath &&
 pipx inject ansible argcomplete &&
 echo 'eval "$(register-python-argcomplete pipx)"' >> /$HOME/.bashrc &&
 activate-global-python-argcomplete --user &&
-git clone https://github.com/timherrm/ansible-cfg &&
-/root/.local/bin/ansible-galaxy install -r ansible-cfg/requirements.yml &&
+git clone https://github.com/timherrm/ansible-cfg . &&
+/root/.local/bin/ansible-galaxy install -r requirements.yml &&
 ssh-keygen -f "$HOME/.ssh/id_rsa" -N "" &&
 reboot
 ```
