@@ -3,6 +3,3 @@
 
 - name: Setup for all hosts
   import_playbook: group-all.yml
-
-- name: Localhost specific setup
-  import_playbook: host-localhost.yml
