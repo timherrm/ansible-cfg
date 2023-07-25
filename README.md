@@ -14,6 +14,7 @@ pipx inject ansible argcomplete &&
 echo 'eval "$(register-python-argcomplete pipx)"' >> /root/.bashrc &&
 activate-global-python-argcomplete --user &&
 git clone https://github.com/timherrm/ansible-cfg &&
+ssh-keygen -f "$HOME/.ssh/id_rsa" -N "" &&
 reboot
 ```
     
