@@ -19,3 +19,7 @@ ssh-keygen -f "$HOME/.ssh/id_rsa" -N "" &&
 reboot
 ```
     
+For LXC-containers in proxmox
+```bash
+echo "cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys; apt install sudo -y" | pct enter 123
+```
