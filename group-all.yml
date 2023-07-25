@@ -24,7 +24,7 @@
         unattended_origins_patterns:
           - "origin=*"
         unattended_syslog_enable: true
-  
+
     - name: Install some common software packages
       ansible.builtin.apt:
         state: present
