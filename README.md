@@ -11,7 +11,7 @@ apt install pipx git -y &&
 pipx install --include-deps ansible &&
 pipx ensurepath &&
 pipx inject ansible argcomplete &&
-echo 'eval "$(register-python-argcomplete pipx)"' >> /root/.bashrc &&
+echo 'eval "$(register-python-argcomplete pipx)"' >> /$HOME/.bashrc &&
 activate-global-python-argcomplete --user &&
 git clone https://github.com/timherrm/ansible-cfg &&
 ssh-keygen -f "$HOME/.ssh/id_rsa" -N "" &&
