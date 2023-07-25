@@ -7,7 +7,7 @@ Ansible Configuration for my Homelab
 ## Ansible Server Installation
 
 ```bash
-apt install pipx git sudo -y &&
+apt install pipx git -y &&
 pipx install --include-deps ansible &&
 pipx ensurepath &&
 pipx inject ansible argcomplete &&
