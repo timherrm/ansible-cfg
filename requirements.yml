@@ -1,4 +1,4 @@
 ---
 roles:
   - src: hifis.unattended_upgrades
-    version: v1.12.2
+    version: v3.1.0
