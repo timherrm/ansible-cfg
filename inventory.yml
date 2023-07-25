@@ -1,0 +1,14 @@
+---
+all:
+  hosts:
+    localhost:
+  children:
+    proxmox-ve:
+      hosts:
+        pve1.therr.de:
+        pve2.therr.de:
+        pve2.therr.de:
+    proxmox-bs:
+      hosts:
+        pbs1.therr.de:
+        pbs2.therr.de:
