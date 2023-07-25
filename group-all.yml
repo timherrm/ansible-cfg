@@ -11,13 +11,6 @@
         cache_valid_time: 3600
         autoclean: true
       changed_when: false
-      become_method: su
-
-    - name: Install sudo
-      ansible.builtin.apt:
-        state: present
-        name: sudo
-      become_method: su
 
     - name: Ensure unattended-upgrades is installed and up to date
       apt:
