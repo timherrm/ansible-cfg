@@ -1,0 +1,33 @@
+---
+# tasks for all hosts
+
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Update and clean package cache
+      apt:
+        update_cache: true
+        cache_valid_time: 3600
+        autoclean: true
+      changed_when: false
+
+    - name: Ensure unattended-upgrades is installed and up to date
+      apt:
+        name: unattended-upgrades
+        state: present
+
+    - name: Setup unattended-upgrades
+      include_role:
+        name: hifis.unattended_upgrades
+      vars:
+        unattended_origins_patterns:
+          - "origin=*"
+        unattended_syslog_enable: true
+    
+    - name: Install some common software packages
+      ansible.builtin.apt:
+        state: present
+        name:
+          - molly-guard
+          - vim
