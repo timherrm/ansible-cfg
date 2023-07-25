@@ -1,0 +1,5 @@
+---
+# main playbook aggregating all the other playbooks
+
+- name: localhost specific setup
+  import_playbook: host-localhost.yml
