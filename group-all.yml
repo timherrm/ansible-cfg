@@ -31,6 +31,7 @@
         name:
           - molly-guard
           - vim
+          - curl
 
     - name: Set timezone to Europe/Berlin
       community.general.timezone:
